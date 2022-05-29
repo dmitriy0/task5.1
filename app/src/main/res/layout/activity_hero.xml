@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityHero">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"/>
+
+    <ImageView
+        android:id="@+id/image_health"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/icon_heart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/text_health"
+        app:layout_constraintTop_toTopOf="@id/text_health"/>
+
+    <TextView
+        android:id="@+id/text_health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toEndOf="@id/image_health" />
+
+    <ImageView
+        android:id="@+id/image_mana"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/icon_mana"
+        app:layout_constraintStart_toEndOf="@id/text_health"
+        app:layout_constraintBottom_toBottomOf="@id/text_mana"
+        app:layout_constraintTop_toTopOf="@id/text_mana"/>
+
+    <TextView
+        android:id="@+id/text_mana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@id/text_health"
+        app:layout_constraintStart_toEndOf="@id/image_mana" />
+
+    <TextView
+        android:id="@+id/attack_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/text_health"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/roles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/attack_type"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="TextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
